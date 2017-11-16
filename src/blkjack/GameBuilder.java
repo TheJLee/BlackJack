@@ -6,31 +6,27 @@ import java.util.Scanner;
 enum Suits {SPADE, CLUB, DIAMOND, HEART}
 enum Values {ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING} 
 
-public class Game {
+//make another class called game state?
+public class GameBuilder {
 	List <Card> deck;
 	Player user;
 	Dealer dealer;
-	Game(){
+	GameBuilder(){
 		deck = new ArrayList<Card>();
 		dealer = new Dealer();
 		user = null;
 	}
 	
 	/**
-	 * Starts the game
+	 * Gets the game state ready
 	 */
-	public void initGame() {
-		// create player
-		System.out.println("How much money are you putting in?");
-		try(Scanner scanner = new Scanner( System.in )){
-			String Amount = scanner.nextLine();
-			user= new Player(Integer.parseInt(Amount));
-		} catch (Exception e) {
-	        // Handle exception
-		}
+	public void buildGameState() {
+		//set user's money
+		setPlayerMoney();
 		// create dealer
 		// create deck of cards
 		buildDeck();
+		//start game
 	}
 	
 	//play game method
@@ -43,6 +39,15 @@ public class Game {
 				this.deck.add(NewCard);	
 			}	
 		}	
+	}
+	public void setPlayerMoney() {
+		System.out.println("How much money are you putting in?");
+		try(Scanner scanner = new Scanner( System.in )){
+			String Amount = scanner.nextLine();
+			user= new Player(Integer.parseInt(Amount));
+		} catch (Exception e) {
+	        // Handle exception
+		}
 	}
 	//Check player money for status of game
 
