@@ -1,13 +1,39 @@
 package blkjack;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Hold generic variables and methods that both player and dealer have
+ * @author TGKovu
+ *
+ */
 public class Person {
-	List<Card> hand;
+	//current hand
+	private List<Card> hand;
+	//For doubling down
+	private List<List<Card>> amountOfHands; 
 	Person(){
 		this.hand =  new ArrayList<Card>();
+		this.amountOfHands = new ArrayList<List<Card>>();
 	}
-	public void hit(Card card) {
+	/**
+	 * Add your hand to the amount of hands you have
+	 * @param hand
+	 */
+	public void addToAmountOfHands(List<Card> hand) {
+		this.amountOfHands.add(hand);
+	}
+	/**
+	 * Add a card to your hand
+	 * @param card
+	 */
+	public void addToHand(Card card) {
 		hand.add(card);
 	}
+	/**
+	 * Removes all hand and amount of hands
+	 */
+	public void discardHands() {
+		this.amountOfHands.clear();
+	}
+
 }

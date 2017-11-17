@@ -1,5 +1,9 @@
 package blkjack;
-
+/**
+ * Dealer object is able to compute its next viable move
+ * @author TGKovu
+ *
+ */
 public class Dealer extends Person{
-	//lookup table/compute hit or stay for dealer
+	// TODO lookup table/compute hit or stay for dealer
 }

@@ -1,5 +1,9 @@
 package blkjack;
-
+/**
+ * Card object
+ * @author TGKovu
+ *
+ */
 public class Card {
 	private Values value;
 	private Suits suit;
