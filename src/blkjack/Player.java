@@ -2,7 +2,7 @@ package blkjack;
 import java.util.Scanner;
 /**
  * Player object is the user which let them be in control with their money
- * @author TGKovu
+ * @author J
  *
  */
 public class Player extends Person{

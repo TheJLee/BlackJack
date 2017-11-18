@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 /**
  * Hold generic variables and methods that both player and dealer have
- * @author TGKovu
+ * @author J
  *
  */
 public class Person {
@@ -19,15 +19,15 @@ public class Person {
 	 * Add your hand to the amount of hands you have
 	 * @param hand
 	 */
-	public void addToAmountOfHands(List<Card> hand) {
-		this.amountOfHands.add(hand);
+	public void addToAmountOfHands() {
+		this.amountOfHands.add(this.hand);
 	}
 	/**
 	 * Add a card to your hand
 	 * @param card
 	 */
 	public void addToHand(Card card) {
-		hand.add(card);
+		this.hand.add(card);
 	}
 	/**
 	 * Removes all hand and amount of hands

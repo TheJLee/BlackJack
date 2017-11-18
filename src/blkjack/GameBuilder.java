@@ -8,7 +8,7 @@ enum Values {ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QU
 
 /**
  * Builds the game and then lets the GameState class handle how the game is run
- * @author TGKovu
+ * @author J
  *
  */
 public class GameBuilder {
@@ -26,14 +26,11 @@ public class GameBuilder {
 	/**
 	 * Builds the game and runs
 	 */
-	public void buildGameState() {
+	public void buildGame() {
 		//set user's money
 		setPlayerMoney();
 		// create deck of cards
 		buildDeck();
-		//start game
-		GameState Game = new GameState();
-		Game.Play();	
 	}
 	
 	/**
